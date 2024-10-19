@@ -10,7 +10,14 @@ const bookSchema = mongoose.Schema(
         author:{
             type:String,
             required:true,
-        }
+        },
+        publishYear:{
+            type: Number,
+            required:true,
+        },
+    },
+    {
+        timestamps:true,
     }
 );
-export const Book =mongoose.model('Cat',{name:String});
+export const Book =mongoose.model('Book',bookSchema);
